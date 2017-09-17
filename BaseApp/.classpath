@@ -24,8 +24,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="C:/Softwares/cucumber/cucumber-core-1.2.5.jar"/>
-	<classpathentry kind="lib" path="C:/Softwares/selenium-2.53.0/selenium-java-2.53.0-srcs.jar"/>
-	<classpathentry kind="lib" path="C:/Users/akshatha.b.rao/Downloads/selenium-server-standalone-2.41.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
