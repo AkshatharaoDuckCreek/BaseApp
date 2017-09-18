@@ -5,10 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.cucumber.bhsibase.screenshot.ScreenCapture;
 import com.cucumber.bhsibase.testbase.PartyBase;
 
 public class LoginPage {
-
+ScreenCapture screencap ; 
 	
 	WebDriver driver ; 
 	@FindBy(id="username")
@@ -34,9 +35,10 @@ public class LoginPage {
 	
 	public void enterunamepwd() {
 		// TODO Auto-generated method stub
-		
+		screencap = new ScreenCapture() ; 
 		enterusername.sendKeys("admin");
 		password.sendKeys("admin");
+	screencap.capturescreen("enteruserpwd") ; 
 		
 	}
 
