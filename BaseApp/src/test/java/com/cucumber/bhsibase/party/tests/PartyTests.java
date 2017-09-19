@@ -15,7 +15,8 @@ public class PartyTests extends PartyBase {
 	
 	 
 	
-	@Given("^Enter the username \"([^\"]*)\" and password \"([^\"]*)\"$")
+//	@Given("^Enter the username \"([^\"]*)\" and password \"([^\"]*)\"$")
+/**	@Given("^Enter the username and password$")
 	public void enter_the_username_and_password(String username, String pwd) throws Throwable {
 	   
 		geturl() ; 		
@@ -34,6 +35,25 @@ public class PartyTests extends PartyBase {
 	@Then("^I enter the homepage$")
 	public void i_enter_the_homepage() throws Throwable {
 	 
+		LoginBridge login = new LoginBridge() ; 
+		login.Then();
+	}**/
+	@Given("^Enter the username and password$")
+	public void enter_the_username_and_password() throws Throwable {
+		geturl() ; 
+		LoginBridge login = new LoginBridge() ; 
+		login.Given();
+	}
+
+	@When("^I click on login$")
+	public void i_click_on_login() throws Throwable {
+
+		LoginBridge login = new LoginBridge() ; 
+		login.When() ; 
+	}
+
+	@Then("^I enter the homepage$")
+	public void i_enter_the_homepage() throws Throwable {
 		LoginBridge login = new LoginBridge() ; 
 		login.Then();
 	}

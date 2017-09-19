@@ -1,7 +1,6 @@
 <Party>
-<Addname>
-<test>
-text
-</test>
-</Addname>
+<Login>
+<admin>admin</admin>
+<admin>admin</admin>
+</Login>
 </Party>
