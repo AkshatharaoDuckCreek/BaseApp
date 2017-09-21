@@ -1,4 +1,4 @@
-/*package com.cucumber.bhsibase.datareader;
+package com.cucumber.bhsibase.datareader;
 
 import java.io.File;
 import java.util.List;
@@ -13,21 +13,21 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.helpers.DefaultHandler;
 
-
-
 public class ReadXML extends DefaultHandler {
 
-	File xmlFile = null;
-//	ReadXML readxml = new ReadXML();
+	// ReadXML readxml = new ReadXML();
+
+	static String text = "";
 
 	public String readxml(String value, String file) {
+		File xmlFile;
 
 		try {
 
 			SAXBuilder builder = new SAXBuilder();
 			if (file == "PartyData") {
 
-				xmlFile = new File("\\src\\main\\java\\com\\cucumber\\bhsibase\\data\\PartyData.xml");
+				xmlFile = new File("src/main/java/com/cucumber/bhsibase/data/PartyData.xml");
 			} else if (file == "PolicyData") {
 
 				xmlFile = new File("");
@@ -36,35 +36,25 @@ public class ReadXML extends DefaultHandler {
 				xmlFile = new File("");
 			}
 
-		Document document = builder.build(xmlFile);
+			Document document = builder.build(xmlFile);
 			Element classElement = document.getRootElement();
-			System.out.println("classElement:::::::::::::::"+classElement);
-			
+			System.out.println("classElement:::::::::::::::" + classElement);
+
 			List<Element> elements = classElement.getChildren();
 			for (int temp = 0; temp < elements.size(); temp++) {
 
 				Element data = elements.get(temp);
-				System.out.println("data:::::::::::::::::::::"+data);
+				System.out.println("data:::::::::::::::::::::" + data);
 				value = data.getChild(value).getText();
-				System.out.println("data:::::::::::::::::::::"+value);
+				// System.out.println("data:::::::::::::::::::::"+value);
 			}
-			
-			 DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-	         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-	     org.w3c.dom.Document doc = dBuilder.parse(xmlFile);
-	     doc.getDocumentElement().normalize();
-	     NodeList nList = doc.getElementsByTagName(value);
-	     for (int temp = 0 ; temp< nList.getLength() ; temp++){
-	    	 Node nNode = nList.item(temp) ; 
-	     }
-	     
 
 		} catch (Exception e) {
 
+			System.out.println(e);
 		}
 
 		return value;
 
 	}
 }
-*/

@@ -1,6 +1,6 @@
 <Party>
 <Login>
-<admin>admin</admin>
-<admin>admin</admin>
+<username>admin</username>
+<password>admin</password>
 </Login>
 </Party>

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.cucumber.bhsibase.datareader.ReadXML;
 //import com.cucumber.bhsibase.datareader.ReadXML;
 import com.cucumber.bhsibase.screenshot.ScreenCapture;
 import com.cucumber.bhsibase.testbase.PartyBase;
@@ -39,13 +40,13 @@ public class LoginPage {
 		// TODO Auto-generated method stub
 		screencap = new ScreenCapture();
 
-	//	ReadXML readxmlobj = new ReadXML();
+		ReadXML readxmlobj = new ReadXML();
 
-	//	String readusername = readxmlobj.readxml("admin","PartyData");
-	//	String readpassword = readxmlobj.readxml("admin","PartyData");
+	String readusername = readxmlobj.readxml("username","PartyData");
+	String readpassword = readxmlobj.readxml("password","PartyData");
 
-		enterusername.sendKeys("admin");
-		password.sendKeys("admin");
+		enterusername.sendKeys(readusername);
+		password.sendKeys(readpassword);
 		screencap.capturescreen("enteruserpwd");
 
 	}
