@@ -1,5 +1,6 @@
 package com.cucumber.bhsibase.party.pages;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,6 +13,9 @@ import com.cucumber.bhsibase.testbase.PartyBase;
 
 public class LoginPage {
 	ScreenCapture screencap;
+	final static Logger logger = Logger.getLogger(LoginPage.class);
+	
+	
 
 	WebDriver driver;
 	@FindBy(id = "username")
@@ -47,6 +51,8 @@ public class LoginPage {
 
 		enterusername.sendKeys(readusername);
 		password.sendKeys(readpassword);
+		logger.info("entered username and password");
+		
 		screencap.capturescreen("enteruserpwd");
 
 	}
