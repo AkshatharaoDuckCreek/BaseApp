@@ -3,6 +3,7 @@ package com.cucumber.bhsibase.party.tests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import com.cucumber.bhsibase.bridges.CreatePartyBridge;
 import com.cucumber.bhsibase.bridges.LoginBridge;
 import com.cucumber.bhsibase.testbase.PartyBase;
 
@@ -45,18 +46,20 @@ public class PartyTests extends PartyBase {
 		login.Given();
 	}
 
-	@When("^I click on login$")
-	public void i_click_on_login() throws Throwable {
-
-		LoginBridge login = new LoginBridge() ; 
-		login.When() ; 
+	@When("^I create a individual Party named \"([^\"]*)\"$")
+	public void i_create_a_individual_Party_named(String partyname) throws Throwable {
+	    CreatePartyBridge createParty = new CreatePartyBridge() ; 
+	    createParty.When() ; 
+	  
 	}
 
-	@Then("^I enter the homepage$")
-	public void i_enter_the_homepage() throws Throwable {
-		LoginBridge login = new LoginBridge() ; 
-		login.Then();
+	@Then("^the \"([^\"]*)\" should be created$")
+	public void the_should_be_created(String partyname) throws Throwable {
+	   
 	}
+
+	
+
 
 
 

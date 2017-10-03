@@ -10,21 +10,20 @@ import com.cucumber.bhsibase.datareader.ReadXML;
 //import com.cucumber.bhsibase.datareader.ReadXML;
 import com.cucumber.bhsibase.screenshot.ScreenCapture;
 import com.cucumber.bhsibase.testbase.PartyBase;
+import com.cucumber.bhsibase.testbase.PartyElementConstants;
 
 public class LoginPage {
 	ScreenCapture screencap;
 	final static Logger logger = Logger.getLogger(LoginPage.class);
-	
-	
 
 	WebDriver driver;
-	@FindBy(id = "username")
+	@FindBy(id = PartyElementConstants.PARTY_LOGIN_USERNAME)
 	WebElement enterusername;
 
 	@FindBy(id = "password")
 	WebElement password;
 
-	@FindBy(xpath = ".//*[@id='home']/a")
+	@FindBy(xpath = PartyElementConstants.PARTY_LOGIN_CLICKLOGIN)
 	WebElement clicklogin;
 
 	@FindBy(id = "id_LogOut")
@@ -46,20 +45,14 @@ public class LoginPage {
 
 		ReadXML readxmlobj = new ReadXML();
 
-	String readusername = readxmlobj.readxml("username","PartyData");
-	String readpassword = readxmlobj.readxml("password","PartyData");
+		String readusername = readxmlobj.readxml("username", "PartyData");
+		String readpassword = readxmlobj.readxml("password", "PartyData");
 
 		enterusername.sendKeys(readusername);
 		password.sendKeys(readpassword);
 		logger.info("entered username and password");
-		
+
 		screencap.capturescreen("enteruserpwd");
-
-	}
-
-	public void clicklogin() {
-		// TODO Auto-generated method stub
-
 		clicklogin.click();
 
 	}

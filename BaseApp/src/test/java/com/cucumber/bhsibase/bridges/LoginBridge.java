@@ -25,7 +25,7 @@ public class LoginBridge  {
 	public void When(){
 		
 		LoginPage login = new LoginPage(driver) ; 
-		login.clicklogin() ; 
+		//login.clicklogin() ; 
 	}
 	
 	public void Then(){
