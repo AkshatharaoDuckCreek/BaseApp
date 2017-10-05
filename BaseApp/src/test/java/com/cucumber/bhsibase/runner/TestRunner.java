@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources", glue = "com.cucumber.bhsibase.party.tests")
+@CucumberOptions(features = "src/test/resources", glue = "com.cucumber.bhsibase.party.tests",tags={"@Tag"})
 public class TestRunner extends AbstractTestNGCucumberTests {
 
 }

@@ -38,20 +38,19 @@ public class ReadXML extends DefaultHandler {
 
 			Document document = builder.build(xmlFile);
 			Element classElement = document.getRootElement();
-			System.out.println("classElement:::::::::::::::" + classElement);
 
 			List<Element> elements = classElement.getChildren();
 			for (int temp = 0; temp < elements.size(); temp++) {
 
 				Element data = elements.get(temp);
-				System.out.println("data:::::::::::::::::::::" + data);
+
 				value = data.getChild(value).getText();
-				// System.out.println("data:::::::::::::::::::::"+value);
+
 			}
 
 		} catch (Exception e) {
 
-			System.out.println(e);
+			 System.out.println(e);
 		}
 
 		return value;

@@ -1,12 +1,13 @@
 Feature: Base PartyUserStories
 
-  Scenario Outline: Individual Party Creation
+  Scenario: Individual Party Creation
     Given Enter the username and password
-    When I create a individual Party named "<partyName>"
-    Then the "<partyName>" should be created
+    When I create a individual Party
+    Then the party should be created
 
-    Examples: 
-      | partyName     |
-      | SamplePerson |
-
-      
+    @Tag
+    Scenario: Party MRU and party 360 Involvement validation
+    Given Business party has been created
+    And It visible under recently accessed section
+    When I click Organization Party
+    Then the party details should be displayed with party 360 Involvement details

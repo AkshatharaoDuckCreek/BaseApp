@@ -2,5 +2,17 @@
 <Login>
 <username>admin</username>
 <password>admin</password>
+<personorplace>Organization</personorplace>
+<organizationname>SampleOrg1</organizationname>
+<contactperson>OrgPerson</contactperson>
+<methodofcontact>Mail</methodofcontact>
+<partyaddress>100 Main Rd</partyaddress>
+<partycity>Bolivar</partycity>
+<partystate>MO</partystate>
+<partyzipcode>65613</partyzipcode>
+<partyphontype>Business</partyphontype>
+<partyphonenumber>8898898891</partyphonenumber>
+<partyemailtype>Business</partyemailtype>
+<partyemailaddress>org@gmail.com</partyemailaddress>
 </Login>
 </Party>
