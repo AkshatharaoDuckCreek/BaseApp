@@ -5,6 +5,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.cucumber.bhsibase.bridges.CreatePartyBridge;
 import com.cucumber.bhsibase.bridges.LoginBridge;
+import com.cucumber.bhsibase.bridges.RecentlyAccessedBridge;
 import com.cucumber.bhsibase.testbase.PartyBase;
 
 import cucumber.api.java.en.Given;
@@ -15,7 +16,7 @@ public class PartyTests extends PartyBase {
 
 	@Given("^Enter the username and password$")
 	public void enter_the_username_and_password() throws Throwable {
-		geturl();
+   geturl();
 		LoginBridge login = new LoginBridge();
 		login.Given();
 	}
@@ -29,11 +30,34 @@ public class PartyTests extends PartyBase {
 
 	@Then("^the party should be created$")
 	public void the_should_be_created() throws Throwable {
-		
+
 		CreatePartyBridge createParty = new CreatePartyBridge();
 		createParty.Then();
 
+	}
 
+	@Given("^Business party has been created$")
+	public void business_party_has_been_created() throws Throwable {
+		LoginBridge login = new LoginBridge();
+		login.Given();
+	}
+
+	@Given("^It visible under recently accessed section$")
+	public void it_visible_under_recently_accessed_section() throws Throwable {
+		RecentlyAccessedBridge recentlyaccessed = new RecentlyAccessedBridge();
+		recentlyaccessed.given();
+	}
+
+	@When("^I click Organization Party$")
+	public void i_click_Organization_Party() throws Throwable {
+		RecentlyAccessedBridge recentlyaccessed = new RecentlyAccessedBridge();
+		recentlyaccessed.when();
+	}
+
+	@Then("^the party details should be displayed with party (\\d+) Involvement details$")
+	public void the_party_details_should_be_displayed_with_party_Involvement_details(int arg1) throws Throwable {
+		RecentlyAccessedBridge recentlyaccessed = new RecentlyAccessedBridge();
+		recentlyaccessed.then();
 	}
 
 }

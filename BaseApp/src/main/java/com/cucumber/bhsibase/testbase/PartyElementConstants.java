@@ -23,4 +23,9 @@ public class PartyElementConstants {
     public static final String PARTY_DONE="//a[contains(@id,'31_1_1_anchorId')]" ; 
     public static final String PARTY_VALIDATE_ORGNAME="//div[@fieldref='PartyInput.PartyName']" ; 
     public static final String PARTY_VALIDATE_CRRNAME="//div[@fieldref='PartyInput.PartyCorrespondenceName']" ; 
+public static final String PARTY_RECENTLY_ACCESSED_A = "//a[text()='" ; 
+public static  final String PARTY_RECENTLY_ACCESSED_B =  "']"  ; 
+
+
+
 }

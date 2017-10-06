@@ -100,11 +100,11 @@ public class CreatePartyPage {
 		utilities.sendKeysUsingXpath(partystate, baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_STATE));
 		utilities.sendKeysUsingXpath(partyzipcode, baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_ZIPCODE));
 		utilities.sendKeysUsingXpath(partyphonetype, baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_PHONETYPE));
-		utilities.Wait();
+		utilities.Wait(2000);
 		utilities.sendKeysUsingXpath(partyphonenumber, baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_PHONENUMBER));
-		utilities.Wait();
+		utilities.Wait(2000);
 		utilities.sendKeysUsingXpath(partyemailtype, baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_EMAILTYPE));
-		utilities.Wait();
+		utilities.Wait(2000);
 		utilities.sendKeysUsingXpath(partyemailaddress, baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_EMAILADD));
 		utilities.clickByWebElement(clickdone);
 	}

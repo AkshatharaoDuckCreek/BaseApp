@@ -16,7 +16,7 @@ import org.testng.Assert;
 
 public class Utilities {
 
-	int milliSeconds = 1000 ; 
+
 	PartyBase base = new PartyBase();
 
 	public WebElement getWhenVisible(By locator) {
@@ -34,7 +34,7 @@ public class Utilities {
 
 	
 	
-	   public void Wait()
+	   public void Wait(int milliSeconds)
        {
            try {
 			Thread.sleep(milliSeconds);
@@ -53,6 +53,14 @@ public class Utilities {
 		Assert.assertEquals(actualvalue, title);
 	}
 
+	public void validateWhenReady(By locator, String actualvalue) {
+
+		WebDriverWait wait = new WebDriverWait(base.driver, 20);
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+		String title = element.getText();
+		Assert.assertEquals(actualvalue, title);
+	}
+	
 	public void clickByWebElement(WebElement clickelement) {
 		clickelement.click();
 	}
@@ -69,5 +77,10 @@ public class Utilities {
 		element.sendKeys((Keys.ENTER));
 
 	}
+	
+
+	
+	
+	
 
 }

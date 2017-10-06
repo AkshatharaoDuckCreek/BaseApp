@@ -5,7 +5,7 @@ Feature: Base PartyUserStories
     When I create a individual Party
     Then the party should be created
 
-    @Tag
+
     Scenario: Party MRU and party 360 Involvement validation
     Given Business party has been created
     And It visible under recently accessed section
