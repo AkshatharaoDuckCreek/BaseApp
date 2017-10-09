@@ -17,17 +17,19 @@ public class RecentlyAccessedBridge {
 		
 		driver = partybase.driver ; 
 	}
-	RecentlyAccessedPage recentaccessedpage = new RecentlyAccessedPage(driver) ; 
+	
 	public void given() {
-		
+		RecentlyAccessedPage recentaccessedpage = new RecentlyAccessedPage(driver) ; 
 		recentaccessedpage.visiblityUnderRecentlyAccessed() ; 
 	}
 	
 	public void when(){
+		RecentlyAccessedPage recentaccessedpage = new RecentlyAccessedPage(driver) ; 
 		recentaccessedpage.clickOrganizedParty() ; 
 	}
 
 	public void then(){
+		
 		CreatePartyPage createpartypage = new CreatePartyPage(driver);
 		createpartypage.validateParty();
 	}

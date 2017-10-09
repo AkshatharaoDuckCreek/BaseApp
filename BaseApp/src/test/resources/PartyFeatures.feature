@@ -7,7 +7,6 @@ Feature: Base PartyUserStories
 
 
     Scenario: Party MRU and party 360 Involvement validation
-    Given Business party has been created
-    And It visible under recently accessed section
+    Given It visible under recently accessed section
     When I click Organization Party
     Then the party details should be displayed with party 360 Involvement details

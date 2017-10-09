@@ -16,7 +16,7 @@ public class PartyTests extends PartyBase {
 
 	@Given("^Enter the username and password$")
 	public void enter_the_username_and_password() throws Throwable {
-   geturl();
+        geturl();
 		LoginBridge login = new LoginBridge();
 		login.Given();
 	}
@@ -36,14 +36,18 @@ public class PartyTests extends PartyBase {
 
 	}
 
-	@Given("^Business party has been created$")
+	/*@Given("^Business party has been created$")
 	public void business_party_has_been_created() throws Throwable {
+		geturl();
 		LoginBridge login = new LoginBridge();
 		login.Given();
-	}
+	}*/
 
 	@Given("^It visible under recently accessed section$")
 	public void it_visible_under_recently_accessed_section() throws Throwable {
+		geturl();
+		LoginBridge login = new LoginBridge();
+		login.Given();
 		RecentlyAccessedBridge recentlyaccessed = new RecentlyAccessedBridge();
 		recentlyaccessed.given();
 	}

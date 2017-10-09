@@ -64,6 +64,12 @@ public class Utilities {
 	public void clickByWebElement(WebElement clickelement) {
 		clickelement.click();
 	}
+	
+	public void clickByString(String clickelement){
+		
+		WebElement element = base.driver.findElement(By.xpath(clickelement)) ; 
+		element.click();
+	}
 
 	public void NameValidation(WebElement elementXpath, String actualvalue) {
 

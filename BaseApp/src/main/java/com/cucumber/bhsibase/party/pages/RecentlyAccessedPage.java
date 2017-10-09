@@ -15,7 +15,7 @@ public class RecentlyAccessedPage {
 Utilities utilities = new Utilities();
 	
 
-	private PartyBase baseParty;
+	private PartyBase baseParty = new PartyBase();
 	
 	
 
@@ -42,7 +42,8 @@ Utilities utilities = new Utilities();
 
 	public void clickOrganizedParty() {
 	
-		
+		utilities.clickByWebElement(partytab);
+		utilities.clickByString(lastaccessed) ; 
 	}
 
 }
