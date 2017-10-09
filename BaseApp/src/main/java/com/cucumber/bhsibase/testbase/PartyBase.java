@@ -31,7 +31,7 @@ public class PartyBase {
 	ConfigReader reader = new ConfigReader();
 	public static WebDriver driver;
 
-
+@BeforeTest
 	public void geturl() throws Exception {
 		logger.info("Entering the execute message");
 
@@ -50,7 +50,7 @@ public class PartyBase {
 	}
 	
 	
-
+@AfterTest
 	public void closedown() throws Exception {
 		driver.quit();
 

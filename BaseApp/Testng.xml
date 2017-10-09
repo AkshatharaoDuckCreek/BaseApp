@@ -1,0 +1,9 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Party" parallel="none">
+<test name = "Base Party Validation">
+<classes>
+<class name ="com.cucumber.bhsibase.runner.TestRunner"></class>
+</classes>
+</test>
+</suite>

@@ -5,7 +5,7 @@ Feature: Base PartyUserStories
     When I create a individual Party
     Then the party should be created
 
-
+@test
     Scenario: Party MRU and party 360 Involvement validation
     Given It visible under recently accessed section
     When I click Organization Party
