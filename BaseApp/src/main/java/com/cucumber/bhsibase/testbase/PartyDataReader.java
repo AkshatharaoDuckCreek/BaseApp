@@ -15,7 +15,8 @@ public static final String PARTYINFO_INPUT_PHONETYPE = "partyphontype" ;
 public static final String PARTYINFO_INPUT_PHONENUMBER = "partyphonenumber" ; 
 public static final String PARTYINFO_INPUT_EMAILTYPE = "partyemailtype" ; 
 public static final String PARTYINFO_INPUT_EMAILADD = "partyemailaddress" ; 
-
+public static final String PARTYINFO_SELECT_ORG="Organization" ; 
+public static final String PARTYINFO_SEARCH_NAME_ADD ="searchby" ; 
 
 //public static final String PARTYINFO_INPUT_ORGNAME
 

@@ -7,13 +7,16 @@ import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
 import com.cucumber.bhsibase.datareader.ConfigReader;
 import com.cucumber.bhsibase.datareader.ReadXML;
+import com.cucumber.bhsibase.screenshot.ScreenCapture;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
@@ -22,16 +25,21 @@ public class PartyBase {
 
 	// public static WebDriver driver;
 
+	PartyBase baseParty = new PartyBase();
+
 	ReadXML readxmlobj = new ReadXML();
+
+	Utilities utilities = new Utilities();
 
 	final static Logger logger = Logger.getLogger(PartyBase.class);
 
-	//String url = "https://pcdev03.accs54683.asw.accenture.com:8080/BASE_Express/default.aspx";
+	// String url =
+	// "https://pcdev03.accs54683.asw.accenture.com:8080/BASE_Express/default.aspx";
 	String browser = "firefox";
 	ConfigReader reader = new ConfigReader();
 	public static WebDriver driver;
 
-@BeforeTest
+	@BeforeTest
 	public void geturl() throws Exception {
 		logger.info("Entering the execute message");
 
@@ -48,11 +56,71 @@ public class PartyBase {
 		String readvalue = readxmlobj.readxml(value, "PartyData");
 		return readvalue;
 	}
-	
-	
-@AfterTest
+
+	@AfterTest
 	public void closedown() throws Exception {
 		driver.quit();
 
+	}
+
+	@FindBy(id = PartyElementConstants.PARTY_LOGIN_USERNAME)
+	WebElement enterusername;
+
+	@FindBy(id = "password")
+	WebElement password;
+
+	@FindBy(xpath = PartyElementConstants.PARTY_LOGIN_CLICKLOGIN)
+	WebElement clicklogin;
+
+	@FindBy(id = PartyElementConstants.PARTY_CLICK_PARTY)
+	WebElement partytab;
+
+	@FindBy(xpath = PartyElementConstants.PARTY_SEARCH_FOR_PERSON_OR_PLACE)
+	WebElement partysearch;
+
+	@FindBy(xpath = PartyElementConstants.PARTY_SEARCH_ORGANIZATION)
+	WebElement selectorg;
+
+	@FindBy(xpath = PartyElementConstants.PARTY_SELECT_NAME_ADDRESS)
+	WebElement searchby;
+
+	@FindBy(xpath = PartyElementConstants.PARTY_SELECT_ORGNAME)
+	WebElement orgname;
+
+	@FindBy(xpath = PartyElementConstants.PARTY_SEARCH_FOR_PERSON_AND_PLACE)
+	WebElement clicksearch;
+	
+	@FindBy(xpath=PartyElementConstants.PARTY_SELECT_STATE) 
+	WebElement selectstate ; 
+
+	public void loginenterdetails() {
+
+		// TODO Auto-generated method stub
+		// screencap = new ScreenCapture();
+
+		ReadXML readxmlobj = new ReadXML();
+
+		String readusername = readxmlobj.readxml("username", "PartyData");
+		String readpassword = readxmlobj.readxml("password", "PartyData");
+
+		enterusername.sendKeys(readusername);
+		password.sendKeys(readpassword);
+		// logger.info("entered username and password");
+
+		// screencap.capturescreen("enteruserpwd");
+		clicklogin.click();
+
+		partytab.click();
+
+	}
+
+	public void searchParty() {
+
+		partysearch.click();
+		utilities.enterWhenReady(selectorg, baseParty.xmlhelper(PartyDataReader.PARTYINFO_SELECT_ORG));
+		utilities.enterWhenReady(searchby, baseParty.xmlhelper(PartyDataReader.PARTYINFO_SEARCH_NAME_ADD));
+		utilities.enterWhenReady(orgname, baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_ORGNAME));
+		utilities.enterWhenReady(selectstate, baseParty.xmlhelper(PartyDataReader.PARTYINFO_SELECT_TYPE));
+		clicksearch.click();
 	}
 }

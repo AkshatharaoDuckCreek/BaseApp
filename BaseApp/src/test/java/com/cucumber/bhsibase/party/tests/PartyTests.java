@@ -63,5 +63,22 @@ public class PartyTests extends PartyBase {
 		RecentlyAccessedBridge recentlyaccessed = new RecentlyAccessedBridge();
 		recentlyaccessed.then();
 	}
+	@Given("^the business party has been created$")
+	public void the_business_party_has_been_created() throws Throwable {
+		geturl();
+		loginenterdetails() ; 
+	
+	}
+
+	@When("^I search and select Organization Party  by name$")
+	public void i_search_and_select_Organization_Party_by_name() throws Throwable {
+	
+		searchParty() ; 
+	}
+
+	@Then("^the details should be displayed$")
+	public void the_details_should_be_displayed() throws Throwable {
+	    
+	}
 
 }

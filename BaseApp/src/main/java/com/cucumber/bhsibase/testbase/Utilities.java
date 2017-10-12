@@ -33,6 +33,15 @@ public class Utilities {
 	}
 
 	
+	public void enterWhenReady(WebElement locator,String text) {
+		WebDriverWait wait = new WebDriverWait(base.driver, 20);
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+		
+		element.sendKeys(text);
+		element.sendKeys(Keys.ENTER);
+	}
+	
+	
 	
 	   public void Wait(int milliSeconds)
        {

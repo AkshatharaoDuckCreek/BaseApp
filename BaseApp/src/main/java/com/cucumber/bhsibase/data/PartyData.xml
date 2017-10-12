@@ -14,5 +14,7 @@
 <partyphonenumber>8898898891</partyphonenumber>
 <partyemailtype>Business</partyemailtype>
 <partyemailaddress>org@gmail.com</partyemailaddress>
+<Organization>Organization</Organization>
+<searchby>Name and Address</searchby>
 </Login>
 </Party>
