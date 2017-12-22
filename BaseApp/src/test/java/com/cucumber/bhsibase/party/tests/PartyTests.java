@@ -61,10 +61,13 @@ public class PartyTests extends PartyBase {
 		// geturl();
 	//	LoginBridge login = new LoginBridge();
 	//	login.Given();
+		try{
 		RecentlyAccessedBridge recentlyaccessed = new RecentlyAccessedBridge();
 		recentlyaccessed.given();
+	}catch(Exception e){
+		e.printStackTrace(); 
 	}
-
+	}
 	@When("^I click Organization Party$")
 	public void i_click_Organization_Party() throws Throwable {
 		RecentlyAccessedBridge recentlyaccessed = new RecentlyAccessedBridge();
