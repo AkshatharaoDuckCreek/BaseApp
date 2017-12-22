@@ -2,6 +2,7 @@
 <Login>
 <username>admin</username>
 <password>admin</password>
+<party>party</party>
 <personorplace>Organization</personorplace>
 <organizationname>testparty</organizationname>
 <contactperson>OrgPerson</contactperson>

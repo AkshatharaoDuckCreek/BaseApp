@@ -15,7 +15,7 @@ import com.cucumber.bhsibase.testbase.PartyElementConstants;
 public class LoginPage {
 	ScreenCapture screencap;
 	final static Logger logger = Logger.getLogger(LoginPage.class);
-	private PartyBase baseParty ; 
+	
 	
 	
 
@@ -23,7 +23,7 @@ public class LoginPage {
 	@FindBy(id = PartyElementConstants.PARTY_LOGIN_USERNAME)
 	WebElement enterusername;
 
-	@FindBy(id = "password")
+	@FindBy(id = "password-inputEl")
 	WebElement password;
 
 	@FindBy(xpath = PartyElementConstants.PARTY_LOGIN_CLICKLOGIN)

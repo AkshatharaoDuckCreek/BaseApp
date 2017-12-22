@@ -4,18 +4,19 @@ import org.openqa.selenium.WebDriver;
 
 import com.cucumber.bhsibase.party.pages.CreatePartyPage;
 import com.cucumber.bhsibase.party.pages.RecentlyAccessedPage;
-import com.cucumber.bhsibase.testbase.PartyBase;
+import com.cucumber.bhsibase.runner.TestRunner;
+
 
 public class RecentlyAccessedBridge {
 
-	PartyBase partybase = new PartyBase();
+	//PartyBase partybase = new PartyBase();
 	WebDriver driver;
 
 	
 	
 	public RecentlyAccessedBridge(){
 		
-		driver = partybase.driver ; 
+		driver = TestRunner.driver ; 
 	}
 	
 	public void given() {

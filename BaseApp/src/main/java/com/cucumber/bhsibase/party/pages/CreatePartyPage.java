@@ -74,6 +74,12 @@ public class CreatePartyPage {
 	@FindBy(xpath=PartyElementConstants.PARTY_VALIDATE_CRRNAME)
 	WebElement validatecorrpartyname ; 
 
+	@FindBy(xpath = PartyElementConstants.PARTY_VALIDATE_SELECTPARTY) 
+	WebElement selectParty ; 
+	
+	@FindBy(xpath = PartyElementConstants.PARTY_ENTER_PARTY)
+	WebElement enterparty  ; 
+	
 	public CreatePartyPage(WebDriver driver) {
 
 		PageFactory.initElements(driver, this); // this refers current class
@@ -87,11 +93,20 @@ public class CreatePartyPage {
 
 	public void addparty() {
 
+		
+	
 		baseParty = new PartyBase() ; 
-		utilities.clickByWebElement(partytab);
-		utilities.clickWhenReady(addnewparty);
+	//	utilities.clickByWebElement(partytab);
+	utilities.clickByWebElement(selectParty);
+	//utilities.clickByWebElement(partytab) ; 
+	utilities.sendKeysUsingXpath(enterparty, baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_PARTY));
+	utilities.Wait(2000);	
+	utilities.clickWhenReady(addnewparty);
+	utilities.Wait(2000);	
 		utilities.sendKeysUsingXpath(personorplace, baseParty.xmlhelper(PartyDataReader.PARTYINFO_SELECT_TYPE));
+		utilities.Wait(2000);
 		utilities.sendKeysUsingXpath(organizationname, baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_ORGNAME));
+		utilities.Wait(2000);
 		utilities.sendKeysUsingXpath(corresspondencename, baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_CRRNAME));
 		utilities.sendKeysUsingXpath(contactperson, baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_CONTACTPERSON));
 		utilities.sendKeysUsingXpath(preferredcontact, baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_METHOD_OF_CONTACT));
@@ -107,6 +122,8 @@ public class CreatePartyPage {
 		utilities.Wait(2000);
 		utilities.sendKeysUsingXpath(partyemailaddress, baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_EMAILADD));
 		utilities.clickByWebElement(clickdone);
+		
+		
 	}
 	
 	public void validateParty(){

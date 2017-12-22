@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Oct 10 13:50:27 IST 2017</td>
+<td>Started on:</td><td>Tue Oct 24 16:37:22 IST 2017</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (587 ms)</td>
+<tr><td>Total time:</td><td>379 seconds (379802 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,19 +76,17 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.cucumber.bhsibase.runner.TestRunner.feature()'><b>feature</b><br>Test class: com.cucumber.bhsibase.runner.TestRunner<br>Test method: Runs Cucumber Feature<br>Parameters: Base PartyUserStories</td>
-<td><div><pre>cucumber.runtime.CucumberException: java.lang.NullPointerException
+<td><div><pre>cucumber.runtime.CucumberException: java.lang.AssertionError: expected [testpartytestparty] but found [testparty]
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
-Caused by: java.lang.NullPointerException
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy21.sendKeys(Unknown Source)
-	at com.cucumber.bhsibase.party.pages.LoginPage.enterunamepwd(LoginPage.java:54)
-	at com.cucumber.bhsibase.bridges.LoginBridge.Given(LoginBridge.java:21)
-	at com.cucumber.bhsibase.party.tests.PartyTests.it_visible_under_recently_accessed_section(PartyTests.java:50)
-	at ?.Given It visible under recently accessed section(PartyFeatures.feature:10)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace434437292", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace434437292'><pre>cucumber.runtime.CucumberException: java.lang.NullPointerException
+Caused by: java.lang.AssertionError: expected [testpartytestparty] but found [testparty]
+	at com.cucumber.bhsibase.testbase.Utilities.NameValidation(Utilities.java:86)
+	at com.cucumber.bhsibase.party.pages.CreatePartyPage.validateParty(CreatePartyPage.java:115)
+	at com.cucumber.bhsibase.bridges.CreatePartyBridge.Then(CreatePartyBridge.java:29)
+	at com.cucumber.bhsibase.party.tests.PartyTests.the_should_be_created(PartyTests.java:37)
+	at ?.Then the party should be created(PartyFeatures.feature:6)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1296153103", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1296153103'><pre>cucumber.runtime.CucumberException: java.lang.AssertionError: expected [testpartytestparty] but found [testparty]
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -116,17 +114,21 @@ Caused by: java.lang.NullPointerException
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy21.sendKeys(Unknown Source)
-	at com.cucumber.bhsibase.party.pages.LoginPage.enterunamepwd(LoginPage.java:54)
-	at com.cucumber.bhsibase.bridges.LoginBridge.Given(LoginBridge.java:21)
-	at com.cucumber.bhsibase.party.tests.PartyTests.it_visible_under_recently_accessed_section(PartyTests.java:50)
-	at ?.Given It visible under recently accessed section(PartyFeatures.feature:10)
+Caused by: java.lang.AssertionError: expected [testpartytestparty] but found [testparty]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at org.testng.Assert.assertEquals(Assert.java:199)
+	at com.cucumber.bhsibase.testbase.Utilities.NameValidation(Utilities.java:86)
+	at com.cucumber.bhsibase.party.pages.CreatePartyPage.validateParty(CreatePartyPage.java:115)
+	at com.cucumber.bhsibase.bridges.CreatePartyBridge.Then(CreatePartyBridge.java:29)
+	at com.cucumber.bhsibase.party.tests.PartyTests.the_should_be_created(PartyTests.java:37)
+	at ?.Then the party should be created(PartyFeatures.feature:6)
 </pre></div></td>
-<td>0</td>
-<td>com.cucumber.bhsibase.runner.TestRunner@f6c48ac</td></tr>
+<td>379</td>
+<td>com.cucumber.bhsibase.runner.TestRunner@3427b02d</td></tr>
 </table><p>
 </body>
 </html>

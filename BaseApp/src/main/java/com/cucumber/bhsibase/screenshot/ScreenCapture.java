@@ -9,6 +9,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+import com.cucumber.bhsibase.runner.TestRunner;
 import com.cucumber.bhsibase.testbase.PartyBase;
 
 public class ScreenCapture {
@@ -19,9 +20,9 @@ public class ScreenCapture {
 		try {
 			Date date = new Date();
 			SimpleDateFormat formatter = new SimpleDateFormat("YYYY-MM-dd_hh-mm-ss");
-			TakesScreenshot takesScreenshot = (TakesScreenshot) PartyBase.driver;
+			TakesScreenshot takesScreenshot = (TakesScreenshot) TestRunner.driver;
 
-			File scrFile = ((TakesScreenshot) PartyBase.driver).getScreenshotAs(OutputType.FILE);
+			File scrFile = ((TakesScreenshot) TestRunner.driver).getScreenshotAs(OutputType.FILE);
 
 			FileUtils.copyFile(scrFile,
 					new File("./screenshots/" + screenShotName + "_" + formatter.format(date) + ".png"));

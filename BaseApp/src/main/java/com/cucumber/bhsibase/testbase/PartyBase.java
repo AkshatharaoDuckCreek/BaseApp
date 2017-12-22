@@ -25,11 +25,11 @@ public class PartyBase {
 
 	// public static WebDriver driver;
 
-	PartyBase baseParty = new PartyBase();
+PartyBase baseParty ; 
 
 	ReadXML readxmlobj = new ReadXML();
 
-	Utilities utilities = new Utilities();
+	Utilities utilities ; 
 
 	final static Logger logger = Logger.getLogger(PartyBase.class);
 
@@ -37,19 +37,8 @@ public class PartyBase {
 	// "https://pcdev03.accs54683.asw.accenture.com:8080/BASE_Express/default.aspx";
 	String browser = "firefox";
 	ConfigReader reader = new ConfigReader();
-	public static WebDriver driver;
-
-	@BeforeTest
-	public void geturl() throws Exception {
-		logger.info("Entering the execute message");
-
-		driver = new FirefoxDriver();
-		logger.info("Mozzilla Browser opens");
-		driver.get(reader.readurls("ExpressURL"));
-		logger.info("Navigate to express");
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-	}
+	
+	
 
 	public String xmlhelper(String value) {
 
@@ -57,11 +46,7 @@ public class PartyBase {
 		return readvalue;
 	}
 
-	@AfterTest
-	public void closedown() throws Exception {
-		driver.quit();
 
-	}
 
 	@FindBy(id = PartyElementConstants.PARTY_LOGIN_USERNAME)
 	WebElement enterusername;
@@ -89,9 +74,9 @@ public class PartyBase {
 
 	@FindBy(xpath = PartyElementConstants.PARTY_SEARCH_FOR_PERSON_AND_PLACE)
 	WebElement clicksearch;
-	
-	@FindBy(xpath=PartyElementConstants.PARTY_SELECT_STATE) 
-	WebElement selectstate ; 
+
+	@FindBy(xpath = PartyElementConstants.PARTY_SELECT_STATE)
+	WebElement selectstate;
 
 	public void loginenterdetails() {
 
@@ -115,7 +100,8 @@ public class PartyBase {
 	}
 
 	public void searchParty() {
-
+		baseParty   = new PartyBase();
+		utilities = new Utilities();
 		partysearch.click();
 		utilities.enterWhenReady(selectorg, baseParty.xmlhelper(PartyDataReader.PARTYINFO_SELECT_ORG));
 		utilities.enterWhenReady(searchby, baseParty.xmlhelper(PartyDataReader.PARTYINFO_SEARCH_NAME_ADD));

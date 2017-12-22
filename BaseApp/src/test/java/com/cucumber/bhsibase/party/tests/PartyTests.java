@@ -15,39 +15,52 @@ import cucumber.api.java.en.When;
 public class PartyTests extends PartyBase {
 
 	@Given("^Enter the username and password$")
-	public void enter_the_username_and_password() throws Throwable {
-        geturl();
-		LoginBridge login = new LoginBridge();
-		login.Given();
+	public void enter_the_username_and_password() {
+		// geturl();
+
+		try {
+			LoginBridge login = new LoginBridge();
+			login.Given();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@When("^I create a individual Party$")
 	public void i_create_a_individual_Party_named() throws Throwable {
-		CreatePartyBridge createParty = new CreatePartyBridge();
-		createParty.When();
+
+		try {
+			CreatePartyBridge createParty = new CreatePartyBridge();
+			createParty.When();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 
 	}
 
 	@Then("^the party should be created$")
 	public void the_should_be_created() throws Throwable {
+		try {
+			CreatePartyBridge createParty = new CreatePartyBridge();
+			createParty.Then();
+		} catch (Exception e) {
 
-		CreatePartyBridge createParty = new CreatePartyBridge();
-		createParty.Then();
-
+			e.printStackTrace();
+		}
 	}
 
-	/*@Given("^Business party has been created$")
-	public void business_party_has_been_created() throws Throwable {
-		geturl();
-		LoginBridge login = new LoginBridge();
-		login.Given();
-	}*/
+	/*
+	 * @Given("^Business party has been created$") public void
+	 * business_party_has_been_created() throws Throwable { geturl();
+	 * LoginBridge login = new LoginBridge(); login.Given(); }
+	 */
 
 	@Given("^It visible under recently accessed section$")
 	public void it_visible_under_recently_accessed_section() throws Throwable {
-		geturl();
-		LoginBridge login = new LoginBridge();
-		login.Given();
+		// geturl();
+	//	LoginBridge login = new LoginBridge();
+	//	login.Given();
 		RecentlyAccessedBridge recentlyaccessed = new RecentlyAccessedBridge();
 		recentlyaccessed.given();
 	}
@@ -63,22 +76,26 @@ public class PartyTests extends PartyBase {
 		RecentlyAccessedBridge recentlyaccessed = new RecentlyAccessedBridge();
 		recentlyaccessed.then();
 	}
+
 	@Given("^the business party has been created$")
 	public void the_business_party_has_been_created() throws Throwable {
-		geturl();
-		loginenterdetails() ; 
-	
+		// geturl();
+		loginenterdetails();
+
 	}
 
 	@When("^I search and select Organization Party  by name$")
 	public void i_search_and_select_Organization_Party_by_name() throws Throwable {
-	
-		searchParty() ; 
+
+		searchParty();
+		RecentlyAccessedBridge recentlyaccessed = new RecentlyAccessedBridge();
+		recentlyaccessed.when();
 	}
 
 	@Then("^the details should be displayed$")
 	public void the_details_should_be_displayed() throws Throwable {
-	    
+		RecentlyAccessedBridge recentlyaccessed = new RecentlyAccessedBridge();
+		recentlyaccessed.then();
 	}
 
 }

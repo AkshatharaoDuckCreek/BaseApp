@@ -2,6 +2,8 @@ package com.cucumber.bhsibase.testbase;
 
 public class PartyDataReader {
 	
+	
+public static final String PARTYINFO_INPUT_PARTY = "Party" ; 	
 public static final String PARTYINFO_SELECT_TYPE="personorplace" ; 
 public static final String PARTYINFO_INPUT_ORGNAME="organizationname" ;
 public static final String PARTYINFO_INPUT_CRRNAME="organizationname" ; 
