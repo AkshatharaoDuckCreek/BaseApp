@@ -9,7 +9,9 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
@@ -25,11 +27,11 @@ public class PartyBase {
 
 	// public static WebDriver driver;
 
-PartyBase baseParty ; 
+	PartyBase baseParty;
 
 	ReadXML readxmlobj = new ReadXML();
 
-	Utilities utilities ; 
+	Utilities utilities;
 
 	final static Logger logger = Logger.getLogger(PartyBase.class);
 
@@ -37,16 +39,12 @@ PartyBase baseParty ;
 	// "https://pcdev03.accs54683.asw.accenture.com:8080/BASE_Express/default.aspx";
 	String browser = "firefox";
 	ConfigReader reader = new ConfigReader();
-	
-	
 
 	public String xmlhelper(String value) {
 
 		String readvalue = readxmlobj.readxml(value, "PartyData");
 		return readvalue;
 	}
-
-
 
 	@FindBy(id = PartyElementConstants.PARTY_LOGIN_USERNAME)
 	WebElement enterusername;
@@ -64,6 +62,7 @@ PartyBase baseParty ;
 	WebElement partysearch;
 
 	@FindBy(xpath = PartyElementConstants.PARTY_SEARCH_ORGANIZATION)
+	@CacheLookup
 	WebElement selectorg;
 
 	@FindBy(xpath = PartyElementConstants.PARTY_SELECT_NAME_ADDRESS)
@@ -77,6 +76,17 @@ PartyBase baseParty ;
 
 	@FindBy(xpath = PartyElementConstants.PARTY_SELECT_STATE)
 	WebElement selectstate;
+
+	public PartyBase(WebDriver driver) {
+
+		PageFactory.initElements(driver, this); // this refers current class
+												// object
+
+	}
+
+	public PartyBase() {
+
+	}
 
 	public void loginenterdetails() {
 
@@ -100,9 +110,10 @@ PartyBase baseParty ;
 	}
 
 	public void searchParty() {
-		baseParty   = new PartyBase();
+		baseParty = new PartyBase();
 		utilities = new Utilities();
-		partysearch.click();
+		// partysearch.click();
+		utilities.clickByString(PartyElementConstants.PARTY_SEARCH_FOR_PERSON_OR_PLACE);
 		utilities.enterWhenReady(selectorg, baseParty.xmlhelper(PartyDataReader.PARTYINFO_SELECT_ORG));
 		utilities.enterWhenReady(searchby, baseParty.xmlhelper(PartyDataReader.PARTYINFO_SEARCH_NAME_ADD));
 		utilities.enterWhenReady(orgname, baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_ORGNAME));

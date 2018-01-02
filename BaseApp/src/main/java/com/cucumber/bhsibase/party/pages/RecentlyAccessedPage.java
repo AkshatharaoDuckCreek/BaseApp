@@ -27,6 +27,9 @@ Utilities utilities = new Utilities();
 	@FindBy(id = PartyElementConstants.PARTY_CLICK_PARTY)
 	WebElement partytab;
 	
+	@FindBy(xpath = PartyElementConstants.PARTY_CLICK_HOME)
+	WebElement home ; 
+	
 
 	public RecentlyAccessedPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -36,13 +39,13 @@ Utilities utilities = new Utilities();
 	
 	public void visiblityUnderRecentlyAccessed() {
 	
-		utilities.clickByWebElement(partytab);
+		utilities.clickByWebElement(home);
 		utilities.validateWhenReady(value,baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_ORGNAME));
 	}
 
 	public void clickOrganizedParty() {
 	
-		utilities.clickByWebElement(partytab);
+		//utilities.clickByWebElement(partytab);
 		utilities.clickByString(lastaccessed) ; 
 	}
 

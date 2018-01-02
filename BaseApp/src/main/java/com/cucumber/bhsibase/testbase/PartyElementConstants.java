@@ -27,6 +27,9 @@ public class PartyElementConstants {
 	public static final String PARTY_VALIDATE_CRRNAME = "//div[@fieldref='PartyInput.PartyCorrespondenceName']";
 	public static final String PARTY_RECENTLY_ACCESSED_A = "//a[text()='";
 	public static final String PARTY_RECENTLY_ACCESSED_B = "']";
+	public static final String PARTY_CLICK_HOME = "//a[contains(@id,'partyHome')]" ; 
+	
+	
 
 	public static final String PARTY_SEARCH_FOR_PERSON_OR_PLACE = "//div[@id='partyDashboardSearch']/descendant::a";
 	public static final String PARTY_SEARCH_ORGANIZATION = "//input[@fieldref='SD_PartyInput.PartyTypeCode']";
