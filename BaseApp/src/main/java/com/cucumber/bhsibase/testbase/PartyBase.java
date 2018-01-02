@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -113,11 +114,20 @@ public class PartyBase {
 		baseParty = new PartyBase();
 		utilities = new Utilities();
 		// partysearch.click();
+
+		By selectorg = By.xpath(PartyElementConstants.PARTY_SEARCH_ORGANIZATION);
+		By searchname = By.xpath(PartyElementConstants.PARTY_SELECT_NAME_ADDRESS);
+		By selectorgname = By.xpath(PartyElementConstants.PARTY_SELECT_ORGNAME);
+		By selecttype = By.xpath(PartyElementConstants.PARTY_SELECT_STATE);
+        By clicksearch = By.xpath(PartyElementConstants.PARTY_SEARCH_FOR_PERSON_AND_PLACE) ;             
+		
 		utilities.clickByString(PartyElementConstants.PARTY_SEARCH_FOR_PERSON_OR_PLACE);
 		utilities.enterWhenReady(selectorg, baseParty.xmlhelper(PartyDataReader.PARTYINFO_SELECT_ORG));
-		utilities.enterWhenReady(searchby, baseParty.xmlhelper(PartyDataReader.PARTYINFO_SEARCH_NAME_ADD));
-		utilities.enterWhenReady(orgname, baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_ORGNAME));
-		utilities.enterWhenReady(selectstate, baseParty.xmlhelper(PartyDataReader.PARTYINFO_SELECT_TYPE));
-		clicksearch.click();
+		utilities.enterWhenReady(searchname, baseParty.xmlhelper(PartyDataReader.PARTYINFO_SEARCH_NAME_ADD));
+		utilities.enterWhenReady(selectorgname, baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_ORGNAME));
+		utilities.enterWhenReady(selecttype, baseParty.xmlhelper(PartyDataReader.PARTYINFO_SELECT_TYPE));
+		utilities.clickWhenReady(clicksearch);
+		
+	//	clicksearch.click();
 	}
 }

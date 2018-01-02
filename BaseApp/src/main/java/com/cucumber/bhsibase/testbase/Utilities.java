@@ -32,11 +32,30 @@ public class Utilities {
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
 		element.click();
 	}
+	
+	public void clickWhenReady(By locator){
+		
+		WebDriverWait wait = new WebDriverWait(TestRunner.driver, 20);
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+		element.click();
+	}
 
 	public void enterWhenReady(WebElement locator, String text) {
 		WebDriverWait wait = new WebDriverWait(TestRunner.driver, 20);
 		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+		element.clear();
+		element.sendKeys(text);
+		element.sendKeys(Keys.ENTER);
+	}
 
+	public void enterWhenReady(By locator, String text) {
+
+		WebDriverWait wait = new WebDriverWait(TestRunner.driver, 20);
+		// WebElement element =
+		// wait.until(ExpectedConditions.elementToBeClickable(locator));
+
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+		element.clear();
 		element.sendKeys(text);
 		element.sendKeys(Keys.ENTER);
 	}
@@ -88,5 +107,7 @@ public class Utilities {
 		element.sendKeys((Keys.ENTER));
 
 	}
+
+
 
 }

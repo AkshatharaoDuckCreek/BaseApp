@@ -20,7 +20,7 @@ public class PartyTests extends PartyBase {
 
 		try {
 			LoginBridge login = new LoginBridge();
-	login.Given();
+			login.Given();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -57,9 +57,7 @@ public class PartyTests extends PartyBase {
 
 	@Given("^It visible under recently accessed section$")
 	public void it_visible_under_recently_accessed_section() throws Throwable {
-		// geturl();
-		// LoginBridge login = new LoginBridge();
-		// login.Given();
+
 		try {
 			RecentlyAccessedBridge recentlyaccessed = new RecentlyAccessedBridge();
 			recentlyaccessed.given();
@@ -81,12 +79,14 @@ public class PartyTests extends PartyBase {
 
 	@Then("^the party details should be displayed with party (\\d+) Involvement details$")
 	public void the_party_details_should_be_displayed_with_party_Involvement_details(int arg1) throws Throwable {
-try { 
-		RecentlyAccessedBridge recentlyaccessed = new RecentlyAccessedBridge();
-		recentlyaccessed.then();
-	} catch(Exception e){
-		e.printStackTrace();
-	}}
+
+		try {
+			RecentlyAccessedBridge recentlyaccessed = new RecentlyAccessedBridge();
+			recentlyaccessed.then();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 	@Given("^the business party has been created$")
 	public void the_business_party_has_been_created() throws Throwable {
@@ -112,12 +112,13 @@ try {
 
 	@Then("^the details should be displayed$")
 	public void the_details_should_be_displayed() throws Throwable {
-	
+
 		try {
-		RecentlyAccessedBridge recentlyaccessed = new RecentlyAccessedBridge();
-		recentlyaccessed.then();
-	}catch(Exception e){
-		e.printStackTrace();
-	}}
+			RecentlyAccessedBridge recentlyaccessed = new RecentlyAccessedBridge();
+			recentlyaccessed.then();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 }

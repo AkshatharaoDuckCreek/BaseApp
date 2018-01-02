@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="544315" started-at="2017-12-22T06:15:50Z" finished-at="2017-12-22T06:24:54Z">
+  <suite name="Default suite" duration-ms="157317" started-at="2018-01-02T11:44:38Z" finished-at="2018-01-02T11:47:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="544315" started-at="2017-12-22T06:15:50Z" finished-at="2017-12-22T06:24:54Z">
+    <test name="Default test" duration-ms="157317" started-at="2018-01-02T11:44:38Z" finished-at="2018-01-02T11:47:16Z">
       <class name="com.cucumber.bhsibase.runner.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.cucumber.bhsibase.runner.TestRunner@130161f7]" name="setUpClass" is-config="true" duration-ms="393971" started-at="2017-12-22T11:45:50Z" finished-at="2017-12-22T11:52:24Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.cucumber.bhsibase.runner.TestRunner@130161f7]" name="setUpClass" is-config="true" duration-ms="14359" started-at="2018-01-02T17:14:38Z" finished-at="2018-01-02T17:14:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.cucumber.bhsibase.runner.TestRunner@130161f7]" name="feature" duration-ms="147537" started-at="2017-12-22T11:52:25Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2017-12-22T11:54:53Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.cucumber.bhsibase.runner.TestRunner@130161f7]" name="feature" duration-ms="141551" started-at="2018-01-02T17:14:53Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-01-02T17:17:14Z">
           <params>
             <param index="0">
               <value>
@@ -19,100 +19,10 @@
               </value>
             </param>
           </params>
-          <exception class="cucumber.runtime.CucumberException">
-            <message>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"//li[text()='Party']"}
-Command duration or timeout: 71 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'MUM-H6X1N62', ip: '10.207.58.75', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3d5598ad-391d-420d-90b1-bbe1eb4d17a4
-*** Element info: {Using=id, value=//li[text()='Party']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"//li[text()='Party']"}
-Command duration or timeout: 71 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'MUM-H6X1N62', ip: '10.207.58.75', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3d5598ad-391d-420d-90b1-bbe1eb4d17a4
-*** Element info: {Using=id, value=//li[text()='Party']}
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-	at com.cucumber.bhsibase.runner.TestRunner.feature(TestRunner.java:38)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"//li[text()='Party']"}
-Command duration or timeout: 71 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'MUM-H6X1N62', ip: '10.207.58.75', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3d5598ad-391d-420d-90b1-bbe1eb4d17a4
-*** Element info: {Using=id, value=//li[text()='Party']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy19.click(Unknown Source)
-	at com.cucumber.bhsibase.testbase.Utilities.clickByWebElement(Utilities.java:70)
-	at com.cucumber.bhsibase.party.pages.RecentlyAccessedPage.visiblityUnderRecentlyAccessed(RecentlyAccessedPage.java:39)
-	at com.cucumber.bhsibase.bridges.RecentlyAccessedBridge.given(RecentlyAccessedBridge.java:24)
-	at com.cucumber.bhsibase.party.tests.PartyTests.it_visible_under_recently_accessed_section(PartyTests.java:65)
-	at ✽.Given It visible under recently accessed section(src/test/resources/PartyFeatures.feature:11)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"//li[text()='Party']"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'MUM-H6X1N62', ip: '10.207.58.75', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/AKSHAT~1.RAO/AppData/Local/Temp/anonymous7468574510657098299webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///C:/Users/AKSHAT~1.RAO/AppData/Local/Temp/anonymous7468574510657098299webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/AKSHAT~1.RAO/AppData/Local/Temp/anonymous7468574510657098299webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///C:/Users/AKSHAT~1.RAO/AppData/Local/Temp/anonymous7468574510657098299webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
-	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///C:/Users/AKSHAT~1.RAO/AppData/Local/Temp/anonymous7468574510657098299webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
-]]>
-            </full-stacktrace>
-          </exception> <!-- cucumber.runtime.CucumberException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.cucumber.bhsibase.runner.TestRunner@130161f7]" name="tearDownClass" is-config="true" duration-ms="1188" started-at="2017-12-22T11:54:53Z" finished-at="2017-12-22T11:54:54Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.cucumber.bhsibase.runner.TestRunner@130161f7]" name="tearDownClass" is-config="true" duration-ms="1282" started-at="2018-01-02T17:17:14Z" finished-at="2018-01-02T17:17:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

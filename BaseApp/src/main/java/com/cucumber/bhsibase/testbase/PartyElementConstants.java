@@ -36,7 +36,7 @@ public class PartyElementConstants {
 	public static final String PARTY_SELECT_NAME_ADDRESS = "//input[@fieldref='SearchRequestWorkingData.searchType']";
 	public static final String PARTY_SELECT_ORGNAME = "//input[@fieldref='SD_PartyInput.PartyName']";
 
-	public static final String PARTY_SEARCH_FOR_PERSON_AND_PLACE = "//a[contains(@id,'B2_1_1_anchorId')]";
+	public static final String PARTY_SEARCH_FOR_PERSON_AND_PLACE = "//a[contains(@id,'1_1_1_anchorId')]";
 	public static final String PARTY_SELECT_STATE="//input[@fieldref='SD_LocationInput.LocationStateCode']" ; 
 	public static final String PARTY_ENTER_PARTY = ".//*[@id='productNavSelect-inputEl']" ; 
 }
