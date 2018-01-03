@@ -39,4 +39,7 @@ public class PartyElementConstants {
 	public static final String PARTY_SEARCH_FOR_PERSON_AND_PLACE = "//a[contains(@id,'1_1_1_anchorId')]";
 	public static final String PARTY_SELECT_STATE="//input[@fieldref='SD_LocationInput.LocationStateCode']" ; 
 	public static final String PARTY_ENTER_PARTY = ".//*[@id='productNavSelect-inputEl']" ; 
+	public static final String PARTY_ELEMENT_CLICK_RECORD = "//table[@id='tableview-1077-record-78']/descendant::a" ; 
+	
+	
 }

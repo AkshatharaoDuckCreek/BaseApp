@@ -104,7 +104,7 @@ public class PartyTests extends PartyBase {
 		try {
 			searchParty();
 			RecentlyAccessedBridge recentlyaccessed = new RecentlyAccessedBridge();
-			recentlyaccessed.when();
+			recentlyaccessed.whenagain();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

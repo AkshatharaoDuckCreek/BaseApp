@@ -26,12 +26,20 @@ public class RecentlyAccessedBridge {
 	
 	public void when(){
 		RecentlyAccessedPage recentaccessedpage = new RecentlyAccessedPage(driver) ; 
-		recentaccessedpage.clickOrganizedParty() ; 
+		
+		recentaccessedpage.clickOrganizedParty(); 
 	}
 
 	public void then(){
 		
 		CreatePartyPage createpartypage = new CreatePartyPage(driver);
 		createpartypage.validateParty();
+	}
+	
+	public void whenagain(){
+		
+RecentlyAccessedPage recentaccessedpage = new RecentlyAccessedPage(driver) ; 
+		
+		recentaccessedpage.selectOrganizedParty();
 	}
 }

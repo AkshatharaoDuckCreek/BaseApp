@@ -118,14 +118,14 @@ public class PartyBase {
 		By selectorg = By.xpath(PartyElementConstants.PARTY_SEARCH_ORGANIZATION);
 		By searchname = By.xpath(PartyElementConstants.PARTY_SELECT_NAME_ADDRESS);
 		By selectorgname = By.xpath(PartyElementConstants.PARTY_SELECT_ORGNAME);
-		By selecttype = By.xpath(PartyElementConstants.PARTY_SELECT_STATE);
+		By selectstate = By.xpath(PartyElementConstants.PARTY_SELECT_STATE);
         By clicksearch = By.xpath(PartyElementConstants.PARTY_SEARCH_FOR_PERSON_AND_PLACE) ;             
 		
 		utilities.clickByString(PartyElementConstants.PARTY_SEARCH_FOR_PERSON_OR_PLACE);
 		utilities.enterWhenReady(selectorg, baseParty.xmlhelper(PartyDataReader.PARTYINFO_SELECT_ORG));
 		utilities.enterWhenReady(searchname, baseParty.xmlhelper(PartyDataReader.PARTYINFO_SEARCH_NAME_ADD));
 		utilities.enterWhenReady(selectorgname, baseParty.xmlhelper(PartyDataReader.PARTYINFO_INPUT_ORGNAME));
-		utilities.enterWhenReady(selecttype, baseParty.xmlhelper(PartyDataReader.PARTYINFO_SELECT_TYPE));
+		utilities.enterWhenReady(selectstate, baseParty.xmlhelper(PartyDataReader.PARTYINFO_SELECT_STATE));
 		utilities.clickWhenReady(clicksearch);
 		
 	//	clicksearch.click();

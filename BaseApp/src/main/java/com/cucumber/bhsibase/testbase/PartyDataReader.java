@@ -19,6 +19,7 @@ public static final String PARTYINFO_INPUT_EMAILTYPE = "partyemailtype" ;
 public static final String PARTYINFO_INPUT_EMAILADD = "partyemailaddress" ; 
 public static final String PARTYINFO_SELECT_ORG="Organization" ; 
 public static final String PARTYINFO_SEARCH_NAME_ADD ="searchby" ; 
+public static final String PARTYINFO_SELECT_STATE= "partystate" ; 
 
 //public static final String PARTYINFO_INPUT_ORGNAME
 
