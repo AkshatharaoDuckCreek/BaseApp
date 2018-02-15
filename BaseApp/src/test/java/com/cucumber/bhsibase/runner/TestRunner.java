@@ -20,6 +20,8 @@ import cucumber.api.testng.TestNGCucumberRunner;
 @CucumberOptions(features = {"src/test/resources/PartyFeatures.feature"}, glue = {"com.cucumber.bhsibase.party.tests"})
 public class TestRunner  {
 	
+	//runner class
+	
 	public static WebDriver driver ; 
 	   private TestNGCucumberRunner testNGCucumberRunner;
 	   
